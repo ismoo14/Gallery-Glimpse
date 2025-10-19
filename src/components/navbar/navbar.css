@@ -1,0 +1,40 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 40px;
+    padding-left: 270px;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    
+}
+.left{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.left input{
+    border: none;
+    width: 630px;
+    padding: 13px 13px;
+    border-radius: 6px;
+    border-bottom: 1px solid black;
+}
+.right{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.right .user{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+.right .user img{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    margin-top: 14px;
+    object-fit: cover;
+}

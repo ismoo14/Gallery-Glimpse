@@ -1,0 +1,54 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 140px;
+}
+.card{
+    border: 1px solid rgb(136, 134, 134);
+    border-radius: 8px;
+    padding: 0px 30px;
+}
+.section-1 h1,p{
+    color: white;
+}
+.section-2 p{
+    font-size: 18px;
+    color: white;
+}
+.section-2 h4{
+    font-size: 13px;
+    color: white;
+    text-align: center;
+    font-family: 'Times New Roman';
+}
+.section-2 form {
+    display: flex;
+    flex-direction: column;
+}
+.section-2 form input{
+    padding: 8px 17px;
+    background-color: transparent;
+    border: none;
+    border: 1px solid rgb(136, 134, 134);
+    border-radius: 5px;
+}
+.section-2 span{
+    text-decoration: underline;
+    color: white;
+}
+.login-btn{
+    text-align: center;
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    margin-top: 23px;
+    border-radius: 7px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: none;
+}
