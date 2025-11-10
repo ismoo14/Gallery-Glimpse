@@ -12,7 +12,8 @@
     }
 }
 .container{
-    padding: 20px;
+    padding: 10px 20px;
+    margin-left: 20px;
 }
 .menu{
     display: flex;
@@ -28,8 +29,9 @@
     border-radius: 6px;
     margin-left: -10px;
 }
-.user span{
+.user span a{
     font-size: 19px;
+    text-decoration: none;
 }
 .user img{
     width: 45px;
@@ -44,7 +46,9 @@
     gap: 10px;
 }
 .item span{
-    font-size: 17px;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300;
 }
 .menu span{
     color: white;
@@ -65,9 +69,25 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
     margin-bottom: 15px;
+    margin-top: 20px;
 }
 .cata{
     font-size: 20px;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+
+@media (max-width: 530px) {
+    .leftbar {
+        display: none;
+    }
+}
+
+@media (min-width: 531px) and (max-width: 920px){
+    .leftbar {
+        display: none;
+    }
 }

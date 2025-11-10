@@ -1,0 +1,80 @@
+.update{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    z-index: 999;
+}
+
+.update form {
+    /* Style the actual form/content box */
+    background-color: #222; 
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    width: 400px; /* Set a fixed width */
+    max-width: 90%; /* Responsive safety */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px; /* Space between form elements */
+    position: relative;
+    border: 1px solid #444;
+}
+
+.update input[type="text"] {
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    background-color: #333; /* Slightly lighter input background */
+    color: white;
+    font-size: 16px;
+}
+
+.update input::placeholder {
+    color: #bbb;
+}
+
+/* 4. Styling File Inputs (Difficult to style directly, but we can contain them) */
+.update input[type="file"] {
+    color: #bbb;
+    padding: 5px 0;
+    cursor:pointer;
+}
+.update button:not(.close-button) { /* Target the Update button */
+    background-color: #5271ff; /* Accent color */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.update button:not(.close-button):hover {
+    background-color: #4460e0;
+}
+
+/* 6. Styling the Close Button (X) */
+.update .close-button {
+    position: relative;
+    bottom: 120px;
+    right: 40px;
+    background: none;
+    color: #aaa;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    line-height: 1;
+}
+.update .close-button:hover {
+    color: white;
+}

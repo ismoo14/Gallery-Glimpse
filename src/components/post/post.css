@@ -1,0 +1,12 @@
+.user-info .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 10px;
+    text-decoration: none; 
+}
+.dis-img {
+    width: 100%;   
+    height: auto;   
+    display: block;    
+    border-radius: 8px; 
+}

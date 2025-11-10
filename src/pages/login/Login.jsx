@@ -31,7 +31,7 @@ const Login = () => {
         ? err.response.data 
         : "login failed. Please check your details.";
 
-      setErr(errorMessage);
+    setErr(errorMessage);
         }
     }
 

@@ -1,7 +1,7 @@
 .upload {
     padding: 20px 28px; 
     color: white;
-    margin-top: -30px;
+    margin-top: -30px; 
 }
 
 .upload-title {
@@ -10,13 +10,13 @@
     margin-bottom: 15px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 .upload-box {
     width: 100%;
     height: 200px; 
     background-color: #171c26; 
     border: 2px dashed #4e5d78; 
     border-radius: 8px;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,40 +28,45 @@
 .upload-box:hover,
 .upload-box.dragging {
     background-color: #202633;
-    border-color: #7989a3;
+    border-color: #7989a3; 
 }
-
 .upload-label {
-    display: flex;
-    height: 100%;
+    position: relative; 
+    display: block; 
     width: 100%;
-    align-items: center;
-    justify-content: center;
-}
-.upload-content {
-    text-align: center;
-    max-width: 350px;
+    height: 100%;
+    overflow: hidden;
 }
 
+.upload-content {
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center; 
+    text-align: center;
+    cursor: pointer;
+}
 .drag-text {
-    font-size: 18px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 500;
     margin-top: 10px;
     margin-bottom: 5px;
+    text-align: center;
 }
 
 .recommendation-text {
     font-size: 14px;
     color: #a0a0a0; 
     line-height: 23px;
+    text-align: center;
 }
-
-.form-fields label {
-    display: block;
-    font-weight: 500;
-    color: white;
-}
-.form-fields h2{
+.form-fields h2 {
     font-size: 17px;
     font-weight: 600;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -69,22 +74,25 @@
 
 .input-field {
     width: 100%;
-    padding: 10px 12px;
-    background-color: #171c26; /* Dark background */
+    padding: 13px 2px;
+    padding-left: 8px;
+    background-color: #171c26; 
     border: 1px solid #4e5d78;
     border-radius: 4px;
     color: white;
     font-size: 16px;
-    margin-top: -5px;
+    margin-top: -3px;
 }
-.cre{
+
+.cre {
     display: flex;
     justify-content: center;
 }
+
 .create-btn {
     width: 70%;
-    padding:8px 12px;
-    background-color: white; /* Blue Create button */
+    padding: 10px 15px;
+    background-color: white; 
     color: black;
     font-weight: 600;
     border: none;
@@ -92,5 +100,59 @@
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.2s;
-    margin-top: 15px;
+    margin-top: 27px;
 }
+
+
+/* --- Dedicated Mobile Phone Styles (Max Width 600px) --- */
+@media (max-width: 530px) {
+    
+    .upload {
+        /* Set a tighter max-width suitable for small phones */
+        max-width: 95%; 
+        margin: 0 auto; 
+        /* Reduce side padding further */
+        padding: 15px; 
+        box-sizing: border-box;
+    }
+
+    .upload-box {
+        /* Slightly smaller height */
+        height: 160px; 
+    }
+    
+    .upload-title {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .drag-text {
+        font-size: 17px;
+    }
+
+    .recommendation-text {
+        /* Ensure recommendation text is tiny and fits */
+        font-size: 12px;
+        padding: 0 5px; 
+    }
+    
+    .form-fields h2 {
+        font-size: 15px;
+    }
+
+    .input-field {
+        /* Slightly smaller padding */
+        padding: 10px 8px;
+        font-size: 14px;
+    }
+
+    .create-btn {
+        /* Make the button close to full width and slightly smaller text */
+        width: 90%;
+        padding: 10px 15px;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+}
+
+

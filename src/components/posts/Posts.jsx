@@ -1,17 +1,28 @@
+import Post from "../post/Post"
 import "./posts.css"
+import { useQuery } from "@tanstack/react-query"
+import { makeRequest } from "../../axios"
 
-const Posts = () => {
+const Posts = ({ userId, isProfile }) => {
+    
+    const { isLoading, error, data } = useQuery({
+        queryKey: ["posts", userId], 
+        queryFn: () =>
+            makeRequest.get(`/posts${userId ? "?userId=" + userId : ""}`).then((res) => {
+                return res.data;
+            }),
+    });
 
-    const posts = [
-        {
-            id: 1,
-            userId: 1,
-            
-        }
-    ]
-  return (
-    <div>Posts</div>
-  )
+
+return (
+<div className="posts">
+    {error ? "something went wrong" : isLoading ? "loading" : data.map((post) =>
+        <Post post={post} 
+                key={post.id} 
+                isProfile={isProfile}/>
+    )}
+    </div>
+    )
 }
 
 export default Posts

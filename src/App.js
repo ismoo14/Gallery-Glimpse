@@ -10,10 +10,16 @@ import Profile from "./pages/profile/Profile";
 import "./style.css"
 import { useContext } from "react";
 import { AuthContext } from "./context/authContext";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 function App() {
   const {currentUser} = useContext(AuthContext);
+
+  const queryClient = new QueryClient();
+
+
   const Layout = () => {
     return(
+      <QueryClientProvider client={queryClient}>
       <div>
         <Navbar/>
         <div style={{display:"flex"}}>
@@ -23,6 +29,7 @@ function App() {
           </div>
         </div>
       </div>
+      </QueryClientProvider>
     )
   }
 

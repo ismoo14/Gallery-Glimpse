@@ -1,0 +1,27 @@
+.posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 22px; 
+    
+    padding: 20px 0;
+    width: 100%
+}
+.profile-post-item {
+    aspect-ratio: 1 / 1; 
+    overflow: hidden;
+    border-radius: 8px; 
+}
+.profile-post-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+.post-wrapper-container {
+    width: 100%;
+}
+.post-wrapper-container img {
+    max-width: 100%;
+    height: auto; 
+    display: block;
+}

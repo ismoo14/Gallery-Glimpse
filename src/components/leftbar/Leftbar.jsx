@@ -18,6 +18,8 @@ import { Link } from "react-router-dom";
 
 const Leftbar = () => {
     const { currentUser } = useContext(AuthContext)
+
+    const PUBLIC_FOLDER_BASE = "/upload/";
 return (
     <div className='leftbar'>
         <div className="container">
@@ -96,7 +98,12 @@ return (
 
                 <div className="user" style={{backgroundColor: "rgb(100, 99, 99)", marginTop: "10px", textDecoration: "none", padding: "2px 13px"}}>
                 <Link to="/profile/:id">
-                <img src={currentUser.profilePic}alt="" />
+                <img 
+        src={currentUser.profilePic 
+        ? "/upload/" + currentUser.profilePic 
+        : "/path/to/default/pfp.jpg"}
+                        alt="User Profile" 
+                            />
                 </Link>
                 <Link to="/profile/:id">
                 <span>{currentUser.name}</span>

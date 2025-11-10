@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import "./register.css";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/authContext";
 
 const Register = () => {
     const [inputs, setInputs] = useState({
@@ -9,8 +11,10 @@ const Register = () => {
         email:"",
         password:""
     })
+    const navigate = useNavigate();
+    const [err, setErr] = useState(null);
 
-    const [err, setErr] = useState(null)
+    const { login } = useContext(AuthContext);
 
     const handlechange = e =>{
         setInputs(prev=>({...prev, [e.target.name]: e.target.value}))
@@ -18,9 +22,10 @@ const Register = () => {
 
     const handleClick = async (e) => {
     e.preventDefault();
-
     try {
         await axios.post("http://localhost:8800/api/auth/register", inputs);
+        await login({ email: inputs.email, password: inputs.password });
+        navigate("/");
     } catch (err) {
         setErr(err.response.data); 
         const errorMessage = 
@@ -28,7 +33,7 @@ const Register = () => {
         ? err.response.data 
         : "Registration failed. Please check your details.";
 
-      setErr(errorMessage);
+    setErr(errorMessage);
     }
 };
         console.log(err);

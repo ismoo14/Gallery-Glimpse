@@ -1,0 +1,20 @@
+/* In your App.css or main layout file */
+
+.main-layout {
+    display: grid;
+    /* Defines Sidebar (e.g., 240px fixed) and Content (1fr remaining space) */
+    grid-template-columns: 240px 1fr; 
+    height: 100vh;
+}
+
+/* Sidebar element needs no margin-left */
+.sidebar { 
+    /* grid-column: 1; */
+    width: 240px;
+}
+
+/* Main content wrapper needs no margin-left */
+.main-content-wrapper { 
+    /* grid-column: 2; */
+    width: 100%;
+}

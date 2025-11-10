@@ -1,7 +1,19 @@
+.profile {
+    /* FIX 1: Use 100% width, not 100vw, to respect parent containers and avoid scrollbar conflicts */
+    width: 100%; 
+    margin: 0 auto; /* Ensure it's centered if the parent container is constrained */
+    padding: 0;
+    
+    background-color: #000; 
+}
+
 .images{
+    /* Ensures the image container always takes the full width relative to its parent (.profile) */
     width: 100%;
     height: 300px;
     position: relative;
+    padding: 0;
+    margin: 0;
 }
 .cover{
     width: 100%;
@@ -9,8 +21,8 @@
     object-fit: cover;
 }
 .profilePic{
-    width: 80px;
-    height: 80px;
+    width: 95px;
+    height: 90px;
     border-radius: 50%;
     object-fit: cover;
     position: absolute;
@@ -18,21 +30,30 @@
     right: 0;
     margin: auto;
     top: 200px;
+    border: 4px solid white; 
+    box-sizing: border-box;
 }
 .profileContainer {
     display: block;
+    /* Centers only the constrained content BELOW the cover image up to max-width: 800px */
     margin: 0 auto; 
     max-width: 800px;
     width: 100%;
+    /* Added some default padding for inner content */
+    padding: 0 15px; 
+    box-sizing: border-box;
 }
 .cont-info{
     text-align: center !important;
-    margin-top: -29px;
+    margin-top: -35px; 
+    box-sizing: border-box;
 }
 .uInfo {
     text-align: center !important;
     width: 100%;
     margin-top: 5px; 
+    padding: 0; 
+    box-sizing: border-box;
 }
 .name{
     color: white;
@@ -49,6 +70,7 @@
     justify-content: center; 
     gap: 15px; 
     margin-top: 10px; 
+    box-sizing: border-box;
 }
 
 .third button {
@@ -62,6 +84,7 @@
     cursor: pointer;
     border: 1px solid #555;
     color: white;
+    box-sizing: border-box;
 }
 .edit-btn{
     background-color: transparent;
@@ -78,6 +101,7 @@
 .fourth{
     display: flex;
     justify-content: center;
+    box-sizing: border-box;
 }
 .fourth-1 button{
     background-color: black;
@@ -86,7 +110,55 @@
     border-radius: 7px;
     margin-top: 19px;
     font-size: 15px;
-    cursor: pointer;
     border: none;
     border: 2px solid rgb(70, 69, 69);
+    box-sizing: border-box;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Responsive Styles: BELOW 530px (Mobile Layout) */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 530px) {
+    
+    .images {
+        height: 220px;
+    }
+    .cover {
+        height: 70%;
+    }
+
+    .profileContainer {
+        /* FIX 2: Ensure inner content uses full mobile width */
+        max-width: 100%; 
+        padding: 0 10px; 
+    }
+    
+    .profilePic {
+        width: 70px;
+        height: 70px;
+        top: 110px; 
+    }
+
+    .cont-info {
+        margin-top: -45px; 
+    }
+    
+    .name {
+        font-size: 22px; 
+    }
+    
+    .email {
+        font-size: 14px;
+        margin-top: -18px;
+    }
+
+    .third {
+        gap: 10px;
+        margin-top: 15px;
+    }
+    
+    .third button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
 }

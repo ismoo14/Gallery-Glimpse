@@ -1,11 +1,30 @@
 import axios from "axios";
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react"; 
+import { makeRequest } from "../axios";
 
 export const AuthContext = createContext();
+
 export const AuthContextProvider = ({ children }) => {
     const [currentUser, setCurrentUser] = useState(
         JSON.parse(localStorage.getItem("user")) || null
     );
+    const updateCurrentUser = (userData) => {
+        setCurrentUser(userData);
+    };
+
+    const logout = async () => {
+        try {
+            // 1. Send request to backend to clear cookie
+            await makeRequest.post("/auth/logout"); 
+            
+            // 2. Clear local storage and state
+            localStorage.removeItem("user");
+            setCurrentUser(null);
+            
+        } catch (err) {
+            console.error("Logout failed on API side:", err);
+        }
+    };
 
     const login = async (inputs) => {
         const res = await axios.post("http://localhost:8800/api/auth/login", inputs, {
@@ -19,7 +38,7 @@ export const AuthContextProvider = ({ children }) => {
     }, [currentUser]);
 
     return (
-        <AuthContext.Provider value={{currentUser, login }}>
+        <AuthContext.Provider value={{currentUser, login, logout, updateCurrentUser }}>
             {children}
         </AuthContext.Provider>
     )
