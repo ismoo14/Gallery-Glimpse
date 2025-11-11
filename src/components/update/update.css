@@ -8,22 +8,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 50px;
+    /* Removed padding: 50px; as it might interfere with full coverage on small screens */
     z-index: 999;
 }
 
 .update form {
-    /* Style the actual form/content box */
-    background-color: #222; 
-    padding: 40px;
+    background-color: #222;
+    padding: 30px; /* Slightly reduced padding */
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    width: 400px; /* Set a fixed width */
-    max-width: 90%; /* Responsive safety */
+    width: 90%; /* Use percentage for width */
+    max-width: 500px; /* Set a maximum width for desktop */
+    min-width: 300px; /* Ensure a minimum width */
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    gap: 20px; /* Space between form elements */
-    position: relative;
+    flex-direction: column;
+    gap: 20px;
+    position: relative; /* Crucial for absolute positioning of the close button */
     border: 1px solid #444;
 }
 
@@ -62,11 +62,11 @@
     background-color: #4460e0;
 }
 
-/* 6. Styling the Close Button (X) */
 .update .close-button {
-    position: relative;
-    bottom: 120px;
-    right: 40px;
+    /* Position absolutely relative to the .update form container */
+    position: absolute;
+    top: 10px; /* Distance from top edge */
+    right: 10px; /* Distance from right edge */
     background: none;
     color: #aaa;
     border: none;

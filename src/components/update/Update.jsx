@@ -68,8 +68,8 @@ return (
             <input type="file" placeholder="Profile picture" onChange={e=>setProfile(e.target.files[0])}/>
             <input type="text" name="name" onChange={handleChange} value={texts.name} placeholder="Update Name"/>
             <button onClick={handleClick}>Update</button>
+            <button onClick={()=>setOpenUpdate(false)} className="close-button">X</button>
         </form>
-        <button onClick={()=>setOpenUpdate(false)} className="close-button">X</button>
     </div>
 )
 }
