@@ -19,7 +19,6 @@ import { Link } from "react-router-dom";
 const Leftbar = () => {
     const { currentUser } = useContext(AuthContext)
 
-    const PUBLIC_FOLDER_BASE = "/upload/";
 return (
     <div className='leftbar'>
         <div className="container">

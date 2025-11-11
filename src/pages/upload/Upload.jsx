@@ -6,7 +6,6 @@ import { useMutation, useQueryClient } from "@tanstack/react-query"
 import { useNavigate } from "react-router-dom";
 
 const Upload = ({ closeModal }) => {
-    const [isDragging, setIsDragging] = useState(false);
     const [file, setFile] = useState(null)
     const [desc, setDesc]= useState("")
     const [title, setTitle] = useState("")
@@ -75,7 +74,7 @@ return (
             {previewUrl ? (
                 <img 
                     src={previewUrl}
-                    alt="Image Preview" 
+                    alt="uploaded photo of user" 
                     style={{ 
                         width: '100%', 
                         height: '100%', 

@@ -1,5 +1,4 @@
 import "./detail.css";
-import wallpaper from "../../assets/wallpaper.jpg"
 import { useContext } from "react";
 import { AuthContext } from "../../context/authContext";
 import { Link, useParams, useNavigate } from "react-router-dom";
