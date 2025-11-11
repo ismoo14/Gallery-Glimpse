@@ -2,7 +2,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* Use moderate padding for the base */
     padding: 23px 20px; 
     height: 50px;
     position: sticky;
@@ -14,23 +13,19 @@
     display: flex;
     align-items: center;
     gap: 15px;
-    /* Allow the left section to grow and take up space */
     flex-grow: 1; 
 }
 
 .left input {
-    /* REMOVED: Fixed width: 330px; from base. Width is now set per media query. */
     border-radius: 10px;
     padding: 13px 13px;
     box-sizing: border-box;
-    /* Default to flexible width */
     width: 100%; 
 }
 
 .right{
     display: flex;
     align-items: center;
-    /* Ensure the right side doesn't take unnecessary space */
     flex-shrink: 0; 
     gap: 20px;
 }
@@ -48,13 +43,9 @@
 }
 .home-tablet-btn {
     display: none; 
-    /* Ensure home button doesn't affect layout when hidden */
     flex-shrink: 0;
 }
 
-/* -------------------------------------------------------------------------- */
-/* Responsive Styles: Desktop (>= 921px) */
-/* -------------------------------------------------------------------------- */
 @media (min-width: 921px) {
     .navbar {
         padding-left: 270px;
@@ -62,26 +53,20 @@
         margin-top: 13px;
     }
     .left input {
-        width: 330px; /* Full fixed width for desktop */
+        width: 330px; 
     }
 }
 
-/* -------------------------------------------------------------------------- */
-/* Responsive Styles: 531px to 920px (Tablet Layout) */
-/* -------------------------------------------------------------------------- */
 @media (min-width: 531px) and (max-width: 920px) {
     .navbar {
         display: flex; 
-        /* Reduced padding to 20px on the sides for better fit */
         padding: 35px 20px; 
     }
     .left input {
-        /* Use a maximum percentage width to ensure it shrinks gracefully */
         width: 100%; 
         max-width: 350px; 
     }
     .left {
-        /* Allow the input area to use a percentage of the total space */
         flex-basis: 60%; 
         gap: 10px;
     }
@@ -94,10 +79,8 @@
         height: 40px;
         margin-top: 0;
     }
-    /* Explicitly manage icon visibility for tablet layout */
     .home-tablet-btn {
         display: block; 
-        /* Ensure the button shrinks if needed */
         flex-shrink: 0;
     }
     .left > svg { 
@@ -105,9 +88,6 @@
     }
 }
 
-/* -------------------------------------------------------------------------- */
-/* Responsive Styles: Mobile (<= 530px) */
-/* -------------------------------------------------------------------------- */
 @media (max-width: 530px) {
     .navbar {
         padding: 8px 10px;
@@ -121,35 +101,30 @@
 
     .left {
         gap: 5px; 
-        /* Allow search input area to take up most of the space */
         flex-grow: 1; 
     }
     
     .left input {
-        /* Max width is 80% of the screen width to leave room for icons */
         max-width: 80vw; 
         width: 100%;
         padding: 7px 7px;
         font-size: 13px;
     }
-    /* Adjust the Home Button for smaller size */
     .home-tablet-btn svg {
-        font-size: 24px !important; /* Smaller icon size */
-        padding: 3px 8px !important; /* Tighter padding around the icon */
+        font-size: 24px !important; 
+        padding: 3px 8px !important; 
     }
 
     .right {
-        gap: 8px; /* Tighten up the icon spacing on the right */
+        gap: 8px;
     }
     
-    /* Adjust icons on the right side */
     .right svg {
         font-size: 20px !important;
         padding: 3px 7px !important;
     }
 
     .right .user img {
-        /* Slightly shrink profile picture */
         width: 30px;
         height: 30px;
         margin-top: -12px;

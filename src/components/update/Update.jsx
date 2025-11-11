@@ -35,14 +35,13 @@ const mutation = useMutation({
         return makeRequest.put("/users", user);
     },
     onSuccess: () => {
-        // 1. Invalidate for Profile Page refresh
         queryClient.invalidateQueries({ queryKey: ["user"] });
 
         makeRequest.get(`/users/find/${user.id}`).then((res) => {
             updateCurrentUser(res.data);
         });
 
-        setOpenUpdate(false); // Close the update modal
+        setOpenUpdate(false); 
     },
 });
 

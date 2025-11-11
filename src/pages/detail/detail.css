@@ -86,34 +86,25 @@
     color: white;
 }
 
-
-/* --- Media Query for Tablet and Smaller Screens (Max Width 1024px) --- */
 @media (max-width: 920px) {
     
     .container {
-        /* 🛑 FIX 1: Change to vertical stacking */
         flex-direction: column;
-        /* Reduce side padding for the container */
         padding: 20px;
         gap: 20px;
     }
     
-    /* 🛑 FIX 2: Ensure both the image and info sections take full width */
     .firist,
     .second {
         width: 100%;
-        /* Reset padding for the second section */
         padding-top: 0; 
     }
 
     .wall-img {
-        /* Adjust image height to be slightly smaller or auto on tablet */
         height: auto; 
         max-height: 450px; 
-        /* Ensure the image container has enough space */
     }
 
-    /* Adjust typography for tablet readability */
     .second h1 {
         font-size: 30px;
     }
@@ -122,12 +113,10 @@
         font-size: 18px;
     }
     
-    /* Center the user info slightly if needed, though current layout is fine */
     .user {
         margin-top: 15px;
     }
 
-    /* Adjust button padding if they look too large */
     .edit,
     .delete {
         padding: 10px 20px;
@@ -141,37 +130,28 @@
 }
 }
 
-
-/* --- Media Query for Laptop and Larger Screens (Min Width 921px) --- */
 @media (min-width: 921px) {
     
     .container {
-        /* 🛑 RESTORE: Change back to horizontal layout */
         flex-direction: row;
-        /* Restore original gap and padding */
         gap: 30px; 
         padding: 0; 
     }
     
-    /* 🛑 RESTORE: Image section back to 60% width */
     .firist {
         width: 60%; 
     }
 
-    /* 🛑 RESTORE: Info section back to 40% width */
     .second {
         width: 40%;
-        padding-top: 10px; /* Restore original top padding */
+        padding-top: 10px; 
     }
 
     .wall-img {
-        /* Restore the original fixed height or a near-original size */
         height: 526px; 
-        /* Remove max-height constraint */
         max-height: none; 
     }
 
-    /* Restore typography */
     .second h1 {
         font-size: 36px;
     }
@@ -180,7 +160,6 @@
         font-size: 20px;
     }
     
-    /* Restore button padding */
     .edit,
     .delete {
         padding: 8px 19px;

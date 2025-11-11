@@ -1,14 +1,12 @@
 .profile {
-    /* FIX 1: Use 100% width, not 100vw, to respect parent containers and avoid scrollbar conflicts */
     width: 100%; 
-    margin: 0 auto; /* Ensure it's centered if the parent container is constrained */
+    margin: 0 auto; 
     padding: 0;
     
     background-color: #000; 
 }
 
 .images{
-    /* Ensures the image container always takes the full width relative to its parent (.profile) */
     width: 100%;
     height: 300px;
     position: relative;
@@ -35,11 +33,9 @@
 }
 .profileContainer {
     display: block;
-    /* Centers only the constrained content BELOW the cover image up to max-width: 800px */
     margin: 0 auto; 
     max-width: 800px;
     width: 100%;
-    /* Added some default padding for inner content */
     padding: 0 15px; 
     box-sizing: border-box;
 }
@@ -115,9 +111,6 @@
     box-sizing: border-box;
 }
 
-/* -------------------------------------------------------------------------- */
-/* Responsive Styles: BELOW 530px (Mobile Layout) */
-/* -------------------------------------------------------------------------- */
 @media (max-width: 530px) {
     
     .images {
@@ -128,7 +121,6 @@
     }
 
     .profileContainer {
-        /* FIX 2: Ensure inner content uses full mobile width */
         max-width: 100%; 
         padding: 0 10px; 
     }

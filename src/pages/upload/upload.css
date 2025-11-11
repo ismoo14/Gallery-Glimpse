@@ -104,20 +104,16 @@
 }
 
 
-/* --- Dedicated Mobile Phone Styles (Max Width 600px) --- */
 @media (max-width: 530px) {
     
     .upload {
-        /* Set a tighter max-width suitable for small phones */
         max-width: 95%; 
         margin: 0 auto; 
-        /* Reduce side padding further */
         padding: 15px; 
         box-sizing: border-box;
     }
 
     .upload-box {
-        /* Slightly smaller height */
         height: 160px; 
     }
     
@@ -131,7 +127,6 @@
     }
 
     .recommendation-text {
-        /* Ensure recommendation text is tiny and fits */
         font-size: 12px;
         padding: 0 5px; 
     }
@@ -141,13 +136,11 @@
     }
 
     .input-field {
-        /* Slightly smaller padding */
         padding: 10px 8px;
         font-size: 14px;
     }
 
     .create-btn {
-        /* Make the button close to full width and slightly smaller text */
         width: 90%;
         padding: 10px 15px;
         font-size: 16px;

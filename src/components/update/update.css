@@ -8,22 +8,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Removed padding: 50px; as it might interfere with full coverage on small screens */
     z-index: 999;
 }
 
 .update form {
     background-color: #222;
-    padding: 30px; /* Slightly reduced padding */
+    padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    width: 90%; /* Use percentage for width */
-    max-width: 500px; /* Set a maximum width for desktop */
-    min-width: 300px; /* Ensure a minimum width */
+    width: 90%;
+    max-width: 500px; 
+    min-width: 300px; 
     display: flex;
     flex-direction: column;
     gap: 20px;
-    position: relative; /* Crucial for absolute positioning of the close button */
+    position: relative; 
     border: 1px solid #444;
 }
 
@@ -31,7 +30,7 @@
     padding: 12px;
     border: 1px solid #555;
     border-radius: 6px;
-    background-color: #333; /* Slightly lighter input background */
+    background-color: #333; 
     color: white;
     font-size: 16px;
 }
@@ -40,14 +39,13 @@
     color: #bbb;
 }
 
-/* 4. Styling File Inputs (Difficult to style directly, but we can contain them) */
 .update input[type="file"] {
     color: #bbb;
     padding: 5px 0;
     cursor:pointer;
 }
-.update button:not(.close-button) { /* Target the Update button */
-    background-color: #5271ff; /* Accent color */
+.update button:not(.close-button) { 
+    background-color: #5271ff; 
     color: white;
     padding: 12px 20px;
     border: none;
@@ -63,10 +61,9 @@
 }
 
 .update .close-button {
-    /* Position absolutely relative to the .update form container */
     position: absolute;
-    top: 10px; /* Distance from top edge */
-    right: 10px; /* Distance from right edge */
+    top: 10px; 
+    right: 10px; 
     background: none;
     color: #aaa;
     border: none;

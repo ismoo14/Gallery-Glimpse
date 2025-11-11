@@ -14,10 +14,8 @@ export const AuthContextProvider = ({ children }) => {
 
     const logout = async () => {
         try {
-            // 1. Send request to backend to clear cookie
             await makeRequest.post("/auth/logout"); 
             
-            // 2. Clear local storage and state
             localStorage.removeItem("user");
             setCurrentUser(null);
             

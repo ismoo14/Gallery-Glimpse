@@ -55,22 +55,17 @@ body,html{
 }
 
 
-
-
-/* --- Media Query for Tablet and Smaller Screens (Max Width 1024px) --- */
 @media (max-width: 920px) {
     
     .login {
-        /* Ensure it remains centered and adjusts for slightly smaller screens */
         margin-top: 100px; 
-        padding: 0 20px; /* Add slight side padding to prevent touching edges */
+        padding: 0 20px; 
     }
 
     .card {
-        /* 🛑 FIX: Define a maximum width for the card on tablets */
         max-width: 400px;
-        width: 100%; /* Ensure it takes full width up to the max-width */
-        padding: 0 25px; /* Slightly reduce horizontal padding inside the card */
+        width: 100%;
+        padding: 0 25px; 
         box-sizing: border-box;
     }
     
@@ -82,7 +77,6 @@ body,html{
         font-size: 15px;
     }
 
-    /* Adjust input field padding for better touch targets */
     .section-2 form input {
         padding: 10px 17px;
     }
