@@ -50,12 +50,12 @@ const Profile = () => {
         <img 
                     src={"/upload/"+data.coverPic} 
                     className="cover" 
-                    alt="User's Cover picture" 
+                    alt="User cover" 
                 />
       <img 
                     src={"/upload/"+data.profilePic} 
                     className="profilePic"
-                    alt="User's profile picture"  
+                    alt="User profile"  
                 />
       </div>
       <div className="cont-info">

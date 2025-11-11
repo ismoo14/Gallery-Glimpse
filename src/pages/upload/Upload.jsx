@@ -73,7 +73,7 @@ return (
             {previewUrl ? (
                 <img 
                     src={previewUrl}
-                    alt="uploaded photo of user" 
+                    alt="Uploaded content preview" 
                     style={{ 
                         width: '100%', 
                         height: '100%', 
