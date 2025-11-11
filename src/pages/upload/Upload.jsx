@@ -65,8 +65,7 @@ const Upload = ({ closeModal }) => {
 return (
     <div className="upload">
         <h2 className="upload-title">Create New</h2>
-        <div 
-        className={`upload-box ${isDragging ? 'dragging' : ''}`}>
+        <div>
         <input 
         type="file" id="file-upload" hidden onChange={handleFileChange}
         />
