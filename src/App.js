@@ -1,4 +1,4 @@
-import {createBrowserRouter, RouterProvider, Route, Outlet, Navigate} from "react-router-dom"
+import {createBrowserRouter, RouterProvider, Outlet, Navigate} from "react-router-dom"
 import Leftbar from "./components/leftbar/Leftbar";
 import Navbar from "./components/navbar/Navbar";
 import Detail from "./pages/detail/Detail";
